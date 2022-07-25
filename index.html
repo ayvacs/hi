@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="b"></div>
+
+    <div class="c">
+        <p id="ip"></p>
+        <img id="trol" src="trol.jpg">
+    </div>
+
+    <script>
+        $.get("https://ipapi.co/json", function(ip) {
+            ip = ip.ip;
+
+            document.getElementById("ip").innerHTML = ip;
+
+            console.log(ip);
+        });
+    </script>
+
+    <style>
+        #ip {
+            color: black;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+            letter-spacing: 2px;
+            font-size: 30px;
+            text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+            position: relative;
+            top: 20px;
+        }
+
+        #trol {
+            width: 800px;
+            height: 670px;
+            top: 130px;
+            position: absolute;
+        }
+        
+        .b {
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -405px;
+            margin-left: -405px;
+            width: 810px;
+            height: 810px;
+        }
+        
+        .c {
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -400px;
+            margin-left: -400px;
+            width: 800px;
+            height: 800px;
+        }
+
+        body, html {
+            background-color: black;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            overflow-y: hidden; /* Hide vertical scrollbar */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+    </style>
+</body>
+</html>

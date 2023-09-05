@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <link rel="icon" type="image/png" href="https://ave.is-a.dev/assets/skull.png">
+    <title>trol</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
@@ -9,19 +11,14 @@
     <div class="b"></div>
 
     <div class="c">
-        <p id="ip">get trolled retard</p>
-        <img id="trol" src="trol.jpg">
-        <p id="lol">LMFAO</p>
+        <p id="ip">&nbsp;</p>
+        <img id="trol" src="https://ave.is-a.dev/hi/trol.jpg">
+        <p id="lol">get trolled retard</p>
     </div>
-    
 
     <script>
         $.get("https://ipapi.co/json", function(ip) {
-            ip = ip.ip;
-
-            document.getElementById("ip").innerHTML = ip;
-
-            console.log(ip);
+            document.getElementById("ip").innerHTML = ip.ip;
         });
     </script>
 
